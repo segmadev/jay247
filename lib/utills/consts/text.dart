@@ -29,6 +29,7 @@ class AText {
   static const String signin = "Sign In";
   static const String signout = "Sign Out";
   static const String username = "Username";
+  static const String usernameHint = "Create a Unique Username";
   static const String password = "Password";
   static const String forgetpassword = "Forget Password";
   static const String confirmPassword = "Confirm Password";
@@ -37,14 +38,30 @@ class AText {
   static const String next = "Next";
 
   static const String name = "Full Name";
+  static const String nameHint = "John Smith";
   static const String firstName = "First Name";
   static const String lastName = "Last Name";
   static const String email = "E-Mail";
+  static const String emailHint = "email@example.com";
   static const String newPassword = "New Password";
   static const String phoneNo = "Phone Number";
   static const String rememberMe = "Remember Me";
   static const String forgetPassword = "Forget Password?";
+  // create account
   static const String createAccount = "Create Account";
+  static const String createAccountParagrah =
+      "Enter your details to create an account.";
+  static const String haveAnAccount = "Already have an account?";
+  // otp
+  static const String otpAlmost = "Almost There";
+  static const String otpParagrah = "Enter the 4-d-git number that we sent to";
+  static const String otpverifiedParagrah =
+      " you have successfully verified your account.";
+
+  // login screen
+  static const welcome = "Welcome";
+  static const loginParagrah = "Enter your details to login.";
+
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
   static const String iAgreeTo = "I agree to";

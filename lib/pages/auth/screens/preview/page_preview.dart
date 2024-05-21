@@ -1,6 +1,7 @@
 import 'package:jay247/pages/auth/controllers/preview/preview_controller.dart';
 import 'package:jay247/pages/auth/screens/preview/bg_path.dart';
 import 'package:jay247/pages/auth/screens/preview/preview_list.dart';
+import 'package:jay247/pages/auth/screens/signup/signup_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -91,6 +92,9 @@ class _APagePreviewState extends State<APagePreview> {
 
                                 // signup button
                                 RoundButton(
+                                  onPressed: () {
+                                    Get.to(SignUpScreen());
+                                  },
                                   name: AText.signup,
                                   width: ASizes.buttonWidthMd,
                                 ),

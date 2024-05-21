@@ -22,7 +22,8 @@ class ATextFormFieldTheme {
       borderSide: const BorderSide(width: 1, color: AColor.transparent),
     ),
 
-    fillColor: AColor.black.withOpacity(0.7),
+    fillColor: AColor.white.withOpacity(0.5),
+    filled: true,
 
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(ASizes.inputFieldRadius),
@@ -40,6 +41,8 @@ class ATextFormFieldTheme {
       borderRadius: BorderRadius.circular(ASizes.inputFieldRadius),
       borderSide: const BorderSide(width: 2, color: AColor.warning),
     ),
+
+    contentPadding: const EdgeInsets.all(9),
   );
 
   static InputDecorationTheme blackInputDecorationTheme = InputDecorationTheme(
@@ -58,7 +61,8 @@ class ATextFormFieldTheme {
       borderSide: const BorderSide(width: 1, color: AColor.transparent),
     ),
 
-    fillColor: AColor.white.withOpacity(0.7),
+    fillColor: AColor.white.withOpacity(0.5),
+    filled: true,
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(ASizes.inputFieldRadius),
       borderSide: const BorderSide(width: 1, color: AColor.gray),
@@ -75,5 +79,7 @@ class ATextFormFieldTheme {
       borderRadius: BorderRadius.circular(ASizes.inputFieldRadius),
       borderSide: const BorderSide(width: 2, color: AColor.warning),
     ),
+
+    contentPadding: const EdgeInsets.all(9),
   );
 }

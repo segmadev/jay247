@@ -51,7 +51,7 @@ class ASizes {
   static const double AuthLogoHeight = 160.0;
 
   // Input field
-  static const double inputFieldRadius = 12.0;
+  static const double inputFieldRadius = 8.0;
   static const double spaceBtwInputFields = 16.0;
 
   // otp input field

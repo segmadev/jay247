@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 
 class AColor {
   // Color gradinetColor = Color.fromRGBO(58, 44, 252, 0.604);
-  static LinearGradient gradinetColor = const LinearGradient(
-    colors: [Color(0xffADF802), Color(0xffADF802), Color(0xff7DB301)],
-    stops: [0, 0.5, 1],
-    begin: Alignment(0.1, 0.1),
-    end: Alignment(-1.0, -0.2),
-  );
+
 // app bar bg
   static const appBarBg = Colors.transparent;
   static const appBarText = Colors.white;
@@ -20,7 +15,7 @@ class AColor {
 // dprimary
   static const dprimary = Color(0xff7DB301);
 // lprimary
-  static const lprimary = Color(0xffADF802);
+  static const lprimary = Color(0xFF80B700);
 // success
   static const lightSuccess = Color(0xff7DB301);
   // Color(0xff86FF8B);
@@ -40,4 +35,20 @@ class AColor {
   static const blue = Color(0xff4318FF);
 // gray
   static const gray = Color(0xFF4F4F4F);
+
+  // Color gradinetColor = Color.fromRGBO(58, 44, 252, 0.604);
+  static LinearGradient gradinetColor = const LinearGradient(
+    colors: [Color(0xffADF802), Color(0xffADF802), Color(0xFF5F8801)],
+    stops: [0, 0.5, 1],
+    begin: Alignment(0.1, 0.1),
+    end: Alignment(-1.0, -0.2),
+  );
+
+  // dark color gradient
+  static LinearGradient darkGradinetColor = const LinearGradient(
+    colors: [Color(0xffADF802), Color(0xffADF802), Color(0xFF5F8801)],
+    stops: [0, 0.5, 1],
+    begin: Alignment(0.1, 0.1),
+    end: Alignment(-1.0, -0.2),
+  );
 }

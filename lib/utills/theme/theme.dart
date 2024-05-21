@@ -33,5 +33,6 @@ class AAppTheme {
     // elevatedButtonTheme: AElevatedButtonTheme.darkElevatedButtonTheme,
     outlinedButtonTheme: AOutlinedButtonTheme.darkOutlinedButtonTheme,
     inputDecorationTheme: ATextFormFieldTheme.blackInputDecorationTheme,
+    
   );
 }

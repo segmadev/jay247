@@ -38,7 +38,7 @@ class ATextTheme {
   /// Customizable black Text Theme
   static TextTheme darkTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
-        fontSize: 32.0, fontWeight: FontWeight.bold, color: AColor.white),
+        fontSize: 32.0, fontWeight: FontWeight.w800, color: AColor.white),
     headlineMedium: const TextStyle().copyWith(
         fontSize: 24.0, fontWeight: FontWeight.w600, color: AColor.white),
     headlineSmall: const TextStyle().copyWith(
