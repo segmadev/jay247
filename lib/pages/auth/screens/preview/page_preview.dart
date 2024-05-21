@@ -9,6 +9,7 @@ import 'package:jay247/pages/auth/screens/preview/single_page.dart';
 import 'package:jay247/pages/auth/screens/preview/soomth_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jay247/widgets/buttons/round_button.dart';
 
 class APagePreview extends StatefulWidget {
   const APagePreview({super.key});
@@ -18,11 +19,11 @@ class APagePreview extends StatefulWidget {
 }
 
 class _APagePreviewState extends State<APagePreview> {
-  List<dynamic> splashList = Get.put(APreviewList.previewList);
-  final _controller = Get.put(PreviewController());
-
   @override
   Widget build(BuildContext context) {
+    List<dynamic> splashList = Get.put(APreviewList.previewList);
+    final _controller = Get.put(PreviewController());
+    print("Length " + splashList.length.toString());
     return Scaffold(
       body: Container(
         color: AHelperFunctions.isDarkMode(context)
@@ -32,15 +33,6 @@ class _APagePreviewState extends State<APagePreview> {
           padding: const EdgeInsets.all(0),
           child: Stack(
             children: <Widget>[
-              // Obx(() => CustomPaint(
-              //       size: Size(
-              //           double.infinity,
-              //           (AHelperFunctions.screenHeight() / 2)
-              //               .toDouble()), //You can Replace [WIDTH] with your desired width for Custom Paint and height will be calculated automatically
-              //       painter: _controller.currentPageIndex.value.floor().isEven
-              //           ? RPSCustomPainter1()
-              //           : RPSCustomPainter2(),
-              //     )),
               PageView(
                 controller: _controller.pageController,
                 onPageChanged: _controller.onPageChanged,
@@ -72,18 +64,40 @@ class _APagePreviewState extends State<APagePreview> {
                     ),
                   )),
               ASoomthPageIndicator(count: splashList.length),
-              Container(
-                alignment: const Alignment(0, 0.9),
-                child: InkWell(
-                  onTap: () {
-                    _controller.nextPage(context);
-                  },
-                  child: AHelperFunctions.displayImage(
-                    "assets/images/onBoard/next_arrow.svg",
-                    width: 60.0,
-                  ),
-                ),
-              ),
+              Obx(() => Container(
+                    alignment: const Alignment(0, 0.9),
+                    child: _controller.currentPageIndex.value <
+                            splashList.length - 1
+                        ? InkWell(
+                            onTap: () {
+                              _controller.nextPage(context);
+                            },
+                            child: AHelperFunctions.displayImage(
+                              "assets/images/onBoard/next_arrow.svg",
+                              width: 60.0,
+                            ),
+                          )
+                        : Container(
+                            width: 350,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                // signin button
+                                RoundButton(
+                                  width: ASizes.buttonWidthMd,
+                                  name: AText.signin,
+                                  isOutlined: true,
+                                ),
+
+                                // signup button
+                                RoundButton(
+                                  name: AText.signup,
+                                  width: ASizes.buttonWidthMd,
+                                ),
+                              ],
+                            ),
+                          ),
+                  )),
             ],
           ),
         ),

@@ -16,6 +16,7 @@ class PreviewController extends GetxController {
   // update current index when page scroll
   void onPageChanged(int index) {
     currentPageIndex.value = index;
+    print(currentPageIndex.value);
   }
 
   void setPageCount(int count) {

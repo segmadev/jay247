@@ -18,10 +18,13 @@ class ASizes {
   static const double fontSizeLg = 30.0;
 
   // Button sizes
-  static const double buttonHeight = 18.0;
+  static const double buttonHeight = 52.0;
   static const double buttonRadius = 12.0;
+  static const double buttonRoundedRadius = 80.0;
   static const double buttonWidth = 120.0;
+  static const double buttonWidthMd = 155.0;
   static const double buttonElevation = 4.0;
+  static const double buttonBorderWidth = 1.0;
 
   // AppBar height
   static const double appBarHeight = 56.0;
