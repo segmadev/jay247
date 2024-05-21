@@ -3,6 +3,8 @@ class AAssets {
   static const String darkAppLogo = "assets/images/logos/dark_logo.png";
   static const String lightAppLogo = "assets/images/logos/light_logo.png";
 
+// svg icons
+  static const String nextIcon = "assets/images/onBoard/next_arrow.svg";
   // profile
   static const String defaultProfileMale = "assets/images/profile/male.jpg";
   static const String defaultProfileFemale = "assets/images/profile/female.jpg";

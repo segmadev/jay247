@@ -1,5 +1,4 @@
-import 'package:jay247/pages/auth/screens/preview/page_preview.dart';
-import 'package:jay247/utills/consts/colors.dart';
+import 'package:jay247/pages/auth/screens/switch/switch_theme_page.dart';
 import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/utills/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +15,13 @@ class MainApp extends StatelessWidget {
     var isDark = AHelperFunctions.isDarkMode(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.system,
       // themeMode: ThemeMode.light,
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
+      themeMode: ThemeMode.system,
       home: Scaffold(
-        body: APagePreview(),
+        body: SwitchThemePage(),
+        // APagePreview(),
         //     Center(
         //         child: CircularProgressIndicator(
         //   color: isDark ? AColor.black : AColor.white,
@@ -30,3 +30,8 @@ class MainApp extends StatelessWidget {
     );
   }
 }
+
+// shape draw
+
+//Add this CustomPaint widget to the Widget Tree
+

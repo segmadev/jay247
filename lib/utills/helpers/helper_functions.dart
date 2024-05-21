@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:flutter_svg/svg.dart';
 import 'package:jay247/utills/consts/asset_paths.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/config.dart';
@@ -7,6 +8,7 @@ import 'package:jay247/utills/consts/size.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:path/path.dart' as p;
 
 class AHelperFunctions {
   static Color? getColor(String value) {
@@ -182,6 +184,21 @@ class AHelperFunctions {
               color: type == "debit" ? AColor.danger : AColor.lightSuccess,
               fontSize: ASizes.fontSizeMd,
             ),
+          );
+  }
+
+  static Widget displayImage(String path, {width, height}) {
+    final ext = p.extension(path);
+    return ext == '.svg'
+        ? SvgPicture.asset(
+            path,
+            width: width,
+            height: height,
+          )
+        : Image.asset(
+            path,
+            width: width,
+            height: height,
           );
   }
 }

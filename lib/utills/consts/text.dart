@@ -54,6 +54,14 @@ class AText {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
 
+// theme page
+  static const String darkTheme = "Dark Theme";
+  static const String lightTheme = "Light Theme";
+  static const String changeTheme = "Change Theme";
+  static const String changeThemeTitle = "Choose your Style";
+  static const String changeThemeP =
+      "Use the switch at the top to choose between light mode and dark mode";
+
   // otp
   static const String otpTitle = "Got it! please enter OTP";
   static const String otpDescription =

@@ -8,7 +8,7 @@ class ATextTheme {
   /// Customizable white Text Theme
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
-        fontSize: 32.0, fontWeight: FontWeight.bold, color: AColor.black),
+        fontSize: 30.0, fontWeight: FontWeight.bold, color: AColor.black),
     headlineMedium: const TextStyle().copyWith(
         fontSize: 24.0, fontWeight: FontWeight.w600, color: AColor.black),
     headlineSmall: const TextStyle().copyWith(
@@ -20,9 +20,9 @@ class ATextTheme {
     titleSmall: const TextStyle().copyWith(
         fontSize: 16.0, fontWeight: FontWeight.w400, color: AColor.black),
     bodyLarge: const TextStyle().copyWith(
-        fontSize: 14.0, fontWeight: FontWeight.w500, color: AColor.black),
+        fontSize: 16.0, fontWeight: FontWeight.w500, color: AColor.black),
     bodyMedium: const TextStyle().copyWith(
-        fontSize: 14.0, fontWeight: FontWeight.normal, color: AColor.black),
+        fontSize: 15.0, fontWeight: FontWeight.normal, color: AColor.black),
     bodySmall: const TextStyle().copyWith(
         fontSize: 14.0,
         fontWeight: FontWeight.w500,
