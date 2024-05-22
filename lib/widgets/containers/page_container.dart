@@ -9,19 +9,22 @@ class PageContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: ASizes.defaultSpace),
-          child: Column(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: children,
-              ),
-              SizedBox(
-                height: ASizes.defaultSpace,
-              )
-            ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: ASizes.defaultSpace),
+            child: Column(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: children,
+                ),
+                SizedBox(
+                  height: ASizes.defaultSpace,
+                )
+              ],
+            ),
           ),
         ),
       ),
