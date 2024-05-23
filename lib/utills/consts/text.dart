@@ -74,7 +74,10 @@ class AText {
 
   // login screen
   static const welcome = "Welcome";
+  static const welcomeBack = "Welcome Back";
   static const loginParagrah = "Enter your details to login.";
+  static const signInToAnother = "Sign in to Another Account";
+
 
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";

@@ -1,3 +1,4 @@
+import 'package:jay247/pages/auth/screens/verify/authorize_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -56,12 +57,14 @@ class AAnimationLoaderWidget extends StatelessWidget {
                   child: RoundButton(
                     onPressed: onActionPressed ??
                         () {
-                          Get.to(NavigationMenu());
+                          Get.to(const AuthorizeScreen()
+                              //NavigationMenu()
+                              );
                         },
                     name: actionText ?? AText.goDashboard,
                   ),
                 )
-              : SizedBox(),
+              : const SizedBox(),
         ],
       ),
     );

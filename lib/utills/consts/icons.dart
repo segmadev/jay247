@@ -25,4 +25,6 @@ class AIcons {
   // debit / credit
   static const IconData credit = Icons.arrow_circle_down;
   static const IconData debit = Icons.arrow_circle_up;
+
+  static const IconData fingerPrintOutlined = Icons.fingerprint_outlined;
 }
