@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jay247/pages/auth/screens/signin/signin_screen.dart';
 import 'package:jay247/pages/auth/screens/verify/otp_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/size.dart';
@@ -59,7 +60,9 @@ class SignUpScreen extends StatelessWidget {
               AuthTextFooter(
                 text: AText.haveAnAccount,
                 buttonText: AText.signin,
-                onTap: () {},
+                onTap: () {
+                  Get.to(const SignInScreen());
+                },
               ),
             ],
           ),

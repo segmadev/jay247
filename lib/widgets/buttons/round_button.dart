@@ -68,7 +68,7 @@ class RoundButton extends StatelessWidget {
                 ),
               )
             : OutlinedButton(
-                onPressed: () {},
+                onPressed: onPressed ?? () {},
                 style: OutlinedButton.styleFrom(
                   // padding: EdgeInsets.all(25),
                   shape: RoundedRectangleBorder(

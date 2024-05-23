@@ -1,5 +1,6 @@
 import 'package:jay247/pages/auth/controllers/preview/preview_controller.dart';
 import 'package:jay247/pages/auth/screens/preview/preview_list.dart';
+import 'package:jay247/pages/auth/screens/signin/signin_screen.dart';
 import 'package:jay247/pages/auth/screens/signup/signup_screen.dart';
 import 'package:jay247/utills/consts/asset_paths.dart';
 import 'package:jay247/utills/consts/colors.dart';
@@ -83,7 +84,10 @@ class _APagePreviewState extends State<APagePreview> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 // signin button
-                                const RoundButton(
+                                RoundButton(
+                                  onPressed: () {
+                                    Get.to(const SignInScreen());
+                                  },
                                   width: ASizes.buttonWidthMd,
                                   name: AText.signin,
                                   isOutlined: true,

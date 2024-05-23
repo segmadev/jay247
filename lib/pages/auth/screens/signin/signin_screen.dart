@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jay247/pages/auth/screens/forget_password/foreget_password.dart';
 import 'package:jay247/pages/auth/screens/signin/bg_path.dart';
+import 'package:jay247/pages/auth/screens/signup/signup_screen.dart';
 import 'package:jay247/pages/transactions/set_pin.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -53,10 +55,15 @@ class SignInScreen extends StatelessWidget {
                   obscureText: true,
                 ),
                 const SizedBox(height: ASizes.defaultSpace),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    AButtonText(name: AText.forgetPassword),
+                    AButtonText(
+                      name: AText.forgetPassword,
+                      onTap: () {
+                        Get.to(const ForgetPassword());
+                      },
+                    ),
                   ],
                 ),
                 const SizedBox(height: ASizes.defaultSpace),
@@ -68,9 +75,12 @@ class SignInScreen extends StatelessWidget {
                   },
                 )),
                 const SizedBox(height: ASizes.spaceBtwItems),
-                const AuthTextFooter(
+                AuthTextFooter(
                   text: AText.dontGetCode,
                   buttonText: AText.createAccount,
+                  onTap: () {
+                    Get.to(const SignUpScreen());
+                  },
                 ),
                 const SizedBox(
                   height: 120,
