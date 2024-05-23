@@ -3,7 +3,6 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:jay247/pages/auth/controllers/theme_controller.dart';
 import 'package:jay247/utills/consts/colors.dart';
-import 'package:jay247/utills/helpers/helper_functions.dart';
 
 class SwitchThemeButton extends StatefulWidget {
   const SwitchThemeButton({super.key});
@@ -13,9 +12,8 @@ class SwitchThemeButton extends StatefulWidget {
 }
 
 class _SwitchThemeButtonState extends State<SwitchThemeButton> {
-  ThemeMode _themeMode = ThemeMode.system;
   bool isDark = true;
-
+  ThemeMode _themeMode = ThemeMode.system;
   void _toggleTheme(ThemeMode themeMode) {
     setState(() {
       _themeMode = themeMode;
@@ -49,12 +47,10 @@ class _SwitchThemeButtonState extends State<SwitchThemeButton> {
       inactiveTextFontWeight: FontWeight.normal,
       inactiveIcon: Icon(Icons.dark_mode_outlined),
       onToggle: (isOn) {
-        print(isOn);
         _controller.switchTheme();
         Get.changeThemeMode(_controller.currentTheme.value);
         setState(() {
           isDark = isOn;
-          print(isDark);
         });
         // isOn ? _toggleTheme(ThemeMode.light) : _toggleTheme(ThemeMode.dark);
       },

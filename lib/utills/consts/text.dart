@@ -36,6 +36,7 @@ class AText {
   static const String tContinue = "Continue";
   static const String done = "Done";
   static const String next = "Next";
+  static const String verify = "Verify";
 
   static const String name = "Full Name";
   static const String nameHint = "John Smith";
@@ -84,6 +85,7 @@ class AText {
   static const String otpDescription =
       "You will get a confirmation code via email you provide.";
   static const String reSendOTP = "Resend OTP";
+  static const String dontGetCode = "Didn’t get code yet?";
 
   // success messages
   static const String success = "Success";

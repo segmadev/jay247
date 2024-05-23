@@ -4,7 +4,9 @@ class AAssets {
   static const String lightAppLogo = "assets/images/logos/light_logo.png";
 
 // svg icons
-  static const String nextIcon = "assets/images/onBoard/next_arrow.svg";
+  static const String nextIcon = "assets/icons/next_arrow.svg";
+  static const String backIcon = "assets/icons/back_arrow_default.svg";
+  static const String backPrimaryIcon = "assets/icons/back_arrow_primary.svg";
   // profile
   static const String defaultProfileMale = "assets/images/profile/male.jpg";
   static const String defaultProfileFemale = "assets/images/profile/female.jpg";
@@ -14,4 +16,9 @@ class AAssets {
 
   // Json Url
   static const String splashUrl = "assets/data/splash.json";
+
+  // lottie animation path
+  static const String lottieSendMessage =
+      "assets/json/animations/send_message.json";
+  static const String lottieVerified = "assets/json/animations/verified.json";
 }

@@ -18,6 +18,7 @@ class AIcons {
 
   // AppBar Icons
   static const IconData back = Icons.arrow_back_ios_outlined;
+  static const IconData secBack = Icons.arrow_back;
   static const IconData forward = Icons.arrow_forward_ios_outlined;
   static const IconData notification = Icons.notifications_active_rounded;
 

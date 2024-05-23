@@ -7,6 +7,7 @@ import 'package:jay247/utills/consts/text.dart';
 import 'package:jay247/widgets/buttons/round_button.dart';
 import 'package:jay247/widgets/containers/page_container.dart';
 import 'package:jay247/widgets/text/TitleP.dart';
+import 'package:jay247/widgets/text/auth_text_footer.dart';
 import 'package:jay247/widgets/textField/textField.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -55,23 +56,11 @@ class SignUpScreen extends StatelessWidget {
                 name: AText.createAccount,
               ),
               const SizedBox(height: ASizes.defaultSpace),
-              Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Text(
-                      AText.haveAnAccount,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        AText.signin,
-                        style: TextStyle(color: AColor.lprimary),
-                      ),
-                    )
-                  ],
-                ),
-              )
+              AuthTextFooter(
+                text: AText.haveAnAccount,
+                buttonText: AText.signin,
+                onTap: () {},
+              ),
             ],
           ),
         ),

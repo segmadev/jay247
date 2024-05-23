@@ -13,7 +13,7 @@ class RoundButton extends StatelessWidget {
     this.width,
     this.height,
     this.isOutlined = false,
-    this.isGradient = true,
+    this.isGradient = false,
   });
   final String name;
   final void Function()? onPressed;

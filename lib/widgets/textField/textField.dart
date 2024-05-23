@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jay247/utills/consts/size.dart';
 
 class ATextFiled extends StatelessWidget {
@@ -22,6 +23,7 @@ class ATextFiled extends StatelessWidget {
   final bool obscureText;
   @override
   Widget build(BuildContext context) {
+    final hideValue = true.obs;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -32,16 +34,25 @@ class ATextFiled extends StatelessWidget {
         ),
         const SizedBox(height: ASizes.sm),
         textFormField ??
-            TextFormField(
-              obscureText: obscureText,
-              controller: controller,
-              initialValue: initialValue,
-              validator: validator,
-              decoration: textInputDecoration ??
-                  InputDecoration(
-                    hintText: hintText,
-                  ),
-            )
+            Obx(() => TextFormField(
+                  obscureText: hideValue.value ? obscureText : false,
+                  controller: controller,
+                  initialValue: initialValue,
+                  validator: validator,
+                  decoration: textInputDecoration ??
+                      InputDecoration(
+                        hintText: hintText,
+                        suffixIcon: obscureText
+                            ? IconButton(
+                                onPressed: () {
+                                  hideValue.value = !hideValue.value;
+                                },
+                                icon: hideValue.value
+                                    ? const Icon(Icons.remove_red_eye_outlined)
+                                    : const Icon(Icons.remove_red_eye_rounded))
+                            : null,
+                      ),
+                ))
       ],
     );
   }
