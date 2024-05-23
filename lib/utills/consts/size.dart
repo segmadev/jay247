@@ -45,6 +45,8 @@ class ASizes {
   // Divider height
   static const double dividerHeight = 1.0;
 
+  static const double spacerHeight = 50.0;
+
   // Product item dimensions
   static const double productImageSize = 120.0;
   static const double productImageRadius = 16.0;

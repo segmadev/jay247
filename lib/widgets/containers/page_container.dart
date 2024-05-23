@@ -7,10 +7,20 @@ import 'package:jay247/utills/helpers/helper_functions.dart';
 
 class PageContainer extends StatelessWidget {
   const PageContainer(
-      {super.key, required this.children, this.showBack = false});
+      {super.key,
+      required this.children,
+      this.showBack = false,
+      this.mainAxisAlignment,
+      this.crossAxisAlignment,
+      this.width,
+      this.height});
 
   final List<Widget> children;
   final bool showBack;
+  final MainAxisAlignment? mainAxisAlignment;
+  final CrossAxisAlignment? crossAxisAlignment;
+  final double? width;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +51,16 @@ class PageContainer extends StatelessWidget {
                         ],
                       )
                     : const SizedBox(),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: children,
+                SizedBox(
+                  width: width ?? MediaQuery.of(context).size.width,
+                  height: height ?? MediaQuery.of(context).size.height,
+                  child: Column(
+                    crossAxisAlignment:
+                        crossAxisAlignment ?? CrossAxisAlignment.start,
+                    mainAxisAlignment:
+                        mainAxisAlignment ?? MainAxisAlignment.start,
+                    children: children,
+                  ),
                 ),
                 SizedBox(
                   height: ASizes.defaultSpace,

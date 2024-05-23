@@ -24,6 +24,8 @@ class AText {
 
   static const String skip = "Skip";
   static const String back = "Back";
+  static const String send = "Send";
+  static const String save = "Save";
 
   static const String signup = "Sign Up";
   static const String signin = "Sign In";
@@ -47,7 +49,18 @@ class AText {
   static const String newPassword = "New Password";
   static const String phoneNo = "Phone Number";
   static const String rememberMe = "Remember Me";
+  // forget password
   static const String forgetPassword = "Forget Password?";
+  static const String forgetPasswordParagraph =
+      "Please Enter your Email Address to receive an OTP security code. ";
+  static const String rememberPassword = "Now remember password?";
+  static const String createPassword = "Create a new password";
+  static const String createPasswordParagraph =
+      "Your new password must be different from the previous password";
+  static const String passwordChanged = "Password Changed";
+  static const String passwordChangedParagraph =
+      "You have successfully verified your password change";
+
   // create account
   static const String createAccount = "Create Account";
   static const String createAccountParagrah =
