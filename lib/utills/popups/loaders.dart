@@ -1,6 +1,8 @@
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/size.dart';
+import 'package:jay247/utills/consts/text.dart';
 import 'package:jay247/widgets/buttons/primary_button.dart';
+import 'package:jay247/widgets/buttons/round_button.dart';
 import 'package:jay247/widgets/navigation/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -51,12 +53,12 @@ class AAnimationLoaderWidget extends StatelessWidget {
           showAction
               ? SizedBox(
                   width: 250,
-                  child: PrimaryButton(
+                  child: RoundButton(
                     onPressed: onActionPressed ??
                         () {
                           Get.to(NavigationMenu());
                         },
-                    name: actionText ?? "Go Home",
+                    name: actionText ?? AText.goDashboard,
                   ),
                 )
               : SizedBox(),

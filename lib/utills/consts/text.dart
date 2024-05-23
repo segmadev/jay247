@@ -94,4 +94,12 @@ class AText {
 
   // processing
   static const String processInfo = 'processing...';
+
+  // set pin page
+  static const String setPin = "Set Transaction & Account Pin";
+  static const String setPinParagraph =
+      "Kindly enter a unique pin that is only known to you.";
+  static const String pinSuccess =
+      "Pin has been saved successfully, you would need this pin for transactions and security.";
+  static const String goDashboard = "Go to Dashboard";
 }

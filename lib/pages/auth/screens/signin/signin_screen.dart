@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:jay247/pages/auth/screens/signin/bg_path.dart';
+import 'package:jay247/pages/transactions/set_pin.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
 import 'package:jay247/utills/helpers/helper_functions.dart';
@@ -35,36 +37,42 @@ class SignInScreen extends StatelessWidget {
         Container(
           width: double.infinity,
           height: double.infinity,
-          child: const Padding(
-            padding: EdgeInsets.all(ASizes.defaultSpace),
+          child: Padding(
+            padding: const EdgeInsets.all(ASizes.defaultSpace),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ATextFiled(
+                const ATextFiled(
                   title: AText.email,
                   hintText: AText.emailHint,
                 ),
-                ATextFiled(
+                const ATextFiled(
                   title: AText.password,
                   hintText: AText.password,
                   obscureText: true,
                 ),
-                SizedBox(height: ASizes.defaultSpace),
-                Row(
+                const SizedBox(height: ASizes.defaultSpace),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     AButtonText(name: AText.forgetPassword),
                   ],
                 ),
-                SizedBox(height: ASizes.defaultSpace),
-                Center(child: RoundButton(name: AText.signin)),
-                SizedBox(height: ASizes.spaceBtwItems),
-                AuthTextFooter(
+                const SizedBox(height: ASizes.defaultSpace),
+                Center(
+                    child: RoundButton(
+                  name: AText.signin,
+                  onPressed: () {
+                    Get.to(const SetPin());
+                  },
+                )),
+                const SizedBox(height: ASizes.spaceBtwItems),
+                const AuthTextFooter(
                   text: AText.dontGetCode,
                   buttonText: AText.createAccount,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 120,
                 ),
               ],

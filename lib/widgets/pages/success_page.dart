@@ -30,6 +30,7 @@ class SuccessSCreen extends StatelessWidget {
               animation: animation,
               heading: heading,
               showAction: showAction,
+              actionText: actionText,
             ),
             // Text("Success"),
           ],
