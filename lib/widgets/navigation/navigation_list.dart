@@ -21,7 +21,6 @@ class ANavigationList {
         child: Text("Transactions Page"),
       )
     },
-    {},
     {
       "label": AText.wallet,
       "icon": AIcons.wallet,

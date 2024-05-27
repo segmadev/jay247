@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:jay247/pages/auth/screens/signin/signin_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
@@ -8,6 +9,7 @@ import 'package:jay247/utills/consts/text.dart';
 import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/widgets/buttons/round_button.dart';
 import 'package:jay247/widgets/containers/page_container.dart';
+import 'package:jay247/widgets/navigation/navigation_menu.dart';
 import 'package:jay247/widgets/profile/profile.dart';
 import 'package:jay247/widgets/text/TitleP.dart';
 import 'package:jay247/widgets/text/auth_text_footer.dart';
@@ -22,7 +24,11 @@ class AuthorizeScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AProfile.profileAvatar,
+          SizedBox(
+              height: ASizes.imageCarouselHeight,
+              width: ASizes.animationIconWith,
+              child: AProfile.profileAvatar),
+          const SizedBox(height: ASizes.spaceBtwItems),
           const TitleP(
             title: AText.welcomeBack,
             paragraph: "",
@@ -48,7 +54,10 @@ class AuthorizeScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const RoundButton(
+                  RoundButton(
+                    onPressed: () {
+                      Get.to(NavigationMenu());
+                    },
                     name: AText.signin,
                   ),
                   RoundButton(

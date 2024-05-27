@@ -3,6 +3,7 @@ import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/utills/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jay247/widgets/navigation/navigation_menu.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,12 +16,13 @@ class MainApp extends StatelessWidget {
     var isDark = AHelperFunctions.isDarkMode(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // themeMode: ThemeMode.light,
+      themeMode: ThemeMode.light,
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.system,
       home: const Scaffold(
-        body: SwitchThemePage(),
+        body: NavigationMenu(),
+        // SwitchThemePage(),
         // APagePreview(),
         //     Center(
         //         child: CircularProgressIndicator(
