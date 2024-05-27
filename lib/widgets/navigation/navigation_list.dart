@@ -1,3 +1,4 @@
+import 'package:jay247/pages/home/screens/home_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -10,9 +11,7 @@ class ANavigationList {
     {
       "label": AText.home,
       "icon": AIcons.home,
-      "screen": Center(
-        child: Text("Home Page"),
-      )
+      "screen": const HomeScreen(),
     },
     {
       "label": AText.transactions,

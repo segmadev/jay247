@@ -6,6 +6,7 @@ class AColor {
 // app bar bg
   static const appBarBg = Colors.transparent;
   static const appBarText = Colors.white;
+  static const secTextColor = Color(0xFFF6FFE6);
 // dbackground
   static const dbackground = Color(0xff161F01);
 // lbackground
