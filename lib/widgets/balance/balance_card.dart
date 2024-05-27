@@ -41,7 +41,7 @@ class BalanceCard extends StatelessWidget {
                   // height: 40,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: AColor.secTextColor,
+                    color: AColor.secTextColor.withOpacity(0.5),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -57,7 +57,9 @@ class BalanceCard extends StatelessWidget {
                         ),
                         const Text(
                           "NGN",
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ],
                     ),

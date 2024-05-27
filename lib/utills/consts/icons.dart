@@ -27,4 +27,8 @@ class AIcons {
   static const IconData debit = Icons.arrow_circle_up;
 
   static const IconData fingerPrintOutlined = Icons.fingerprint_outlined;
+
+  static const IconData transfer = Icons.send_outlined;
+  static const IconData fund = Icons.add;
+  static const IconData withdraw = Icons.send_outlined;
 }
