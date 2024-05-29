@@ -8,22 +8,25 @@ import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/widgets/containers/card.dart';
 
 class BalanceCard extends StatelessWidget {
-  const BalanceCard({super.key});
-
+  const BalanceCard(
+      {super.key, required this.contryCode, required this.currency});
+  final String contryCode;
+  final String currency;
   @override
   Widget build(BuildContext context) {
     final isDark = AHelperFunctions.isDarkMode(context);
     return ACard(
       backgroundColor: isDark ? AColor.dprimary : AColor.lprimary,
       width: 300,
+      height: 130,
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
-                  const Text(
+                  Text(
                     "Current Balance",
                     style: TextStyle(
                         color: AColor.secTextColor,
@@ -38,7 +41,7 @@ class BalanceCard extends StatelessWidget {
               ),
               Container(
                   width: 70,
-                  // height: 40,
+                  // height: 60,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: AColor.secTextColor.withOpacity(0.5),
@@ -50,14 +53,14 @@ class BalanceCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CountryFlag.fromCountryCode(
-                          "NG",
+                          contryCode,
                           height: 20,
                           width: 20,
                           borderRadius: 20.0,
                         ),
-                        const Text(
-                          "NGN",
-                          style: TextStyle(
+                        Text(
+                          currency,
+                          style: const TextStyle(
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -66,14 +69,14 @@ class BalanceCard extends StatelessWidget {
                   )),
             ],
           ),
-          const SizedBox(
+          SizedBox(
             width: 300,
             child: Text(
-              "N 10,000.00",
+              "$currency 10,000.00",
               softWrap: false,
               overflow: TextOverflow.fade,
               maxLines: 2,
-              style: TextStyle(
+              style: const TextStyle(
                   color: AColor.secTextColor,
                   fontSize: ASizes.lg,
                   fontWeight: FontWeight.bold),

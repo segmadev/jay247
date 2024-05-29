@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unicons/unicons.dart';
 
 class AIcons {
   // bottom bar Icons
@@ -28,7 +29,8 @@ class AIcons {
 
   static const IconData fingerPrintOutlined = Icons.fingerprint_outlined;
 
-  static const IconData transfer = Icons.send_outlined;
+  static const IconData transfer = UniconsLine.exchange;
   static const IconData fund = Icons.add;
-  static const IconData withdraw = Icons.send_outlined;
+  static const IconData withdraw = UniconsLine.money_withdrawal;
+  static const IconData crypto = UniconsLine.bitcoin_alt;
 }

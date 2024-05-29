@@ -1,5 +1,8 @@
+import 'package:get/get.dart';
+import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:flutter/material.dart';
+import 'package:jay247/utills/helpers/helper_functions.dart';
 
 class SectionHeader extends StatelessWidget {
   const SectionHeader(
@@ -15,6 +18,7 @@ class SectionHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = AHelperFunctions.isDarkMode(context);
     return SizedBox(
       width: double.infinity,
       child: Column(
@@ -32,7 +36,14 @@ class SectionHeader extends StatelessWidget {
                   ? TextButton(
                       onPressed: textAction ?? () {},
                       child: Text(textButton!,
-                          style: Theme.of(context).textTheme.labelSmall),
+                          style: Theme.of(context)
+                              .textTheme
+                              .labelSmall
+                              ?.copyWith(
+                                  color: isDark
+                                      ? AColor.dprimary
+                                      : AColor.lprimary,
+                                  fontWeight: FontWeight.bold)),
                     )
                   : Text(""),
             ],

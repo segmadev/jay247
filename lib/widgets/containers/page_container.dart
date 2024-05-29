@@ -13,7 +13,8 @@ class PageContainer extends StatelessWidget {
       this.mainAxisAlignment,
       this.crossAxisAlignment,
       this.width,
-      this.height});
+      this.height,
+      this.padding});
 
   final List<Widget> children;
   final bool showBack;
@@ -21,6 +22,7 @@ class PageContainer extends StatelessWidget {
   final CrossAxisAlignment? crossAxisAlignment;
   final double? width;
   final double? height;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class PageContainer extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding:
+            padding: padding ??
                 const EdgeInsets.symmetric(horizontal: ASizes.defaultSpace),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

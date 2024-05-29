@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/size.dart';
+import 'package:jay247/utills/consts/text.dart';
 import 'package:jay247/widgets/icons/circle_icon.dart';
 
 class ActionButtons extends StatelessWidget {
@@ -10,7 +11,7 @@ class ActionButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: SizedBox(
-        width: 270,
+        width: 300,
         child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -18,18 +19,28 @@ class ActionButtons extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.transfer),
+                  ACircleIcon(icon: AIcons.fund),
                   SizedBox(height: ASizes.sm),
-                  Text("Transfer",
+                  Text(AText.fund,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.fund),
+                  ACircleIcon(icon: AIcons.crypto),
                   SizedBox(height: ASizes.sm),
-                  Text("Fund", style: TextStyle(fontSize: ASizes.fontSizeSm)),
+                  Text(AText.convert,
+                      style: TextStyle(fontSize: ASizes.fontSizeSm)),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  ACircleIcon(icon: AIcons.transfer),
+                  SizedBox(height: ASizes.sm),
+                  Text(AText.transfer,
+                      style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
               Column(
@@ -37,7 +48,7 @@ class ActionButtons extends StatelessWidget {
                 children: [
                   ACircleIcon(icon: AIcons.withdraw),
                   SizedBox(height: ASizes.sm),
-                  Text("Withdraw",
+                  Text(AText.widthdraw,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),

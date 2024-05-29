@@ -8,13 +8,19 @@ class BalanceSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 140,
+      height: 160,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: const [
-          BalanceCard(),
+          BalanceCard(
+            contryCode: "NG",
+            currency: "NGN",
+          ),
           SizedBox(width: 10),
-          BalanceCard(),
+          BalanceCard(
+            contryCode: "KE",
+            currency: "KSH",
+          ),
         ],
       ),
     );

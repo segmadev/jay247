@@ -16,12 +16,13 @@ class MainApp extends StatelessWidget {
     var isDark = AHelperFunctions.isDarkMode(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.light,
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
-      // themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,
       home: const Scaffold(
-        body: NavigationMenu(),
+        body: 
+        NavigationMenu(),
         // SwitchThemePage(),
         // APagePreview(),
         //     Center(

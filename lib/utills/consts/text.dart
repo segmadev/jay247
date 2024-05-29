@@ -39,6 +39,11 @@ class AText {
   static const String done = "Done";
   static const String next = "Next";
   static const String verify = "Verify";
+  static const String fund = "Fund";
+  static const String convert = "Convert";
+  static const String widthdraw = "Widthdraw";
+  static const String transfer = "Transfer";
+  static const String viewAll = "View All";
 
   static const String name = "Full Name";
   static const String nameHint = "John Smith";
@@ -77,7 +82,6 @@ class AText {
   static const welcomeBack = "Welcome Back";
   static const loginParagrah = "Enter your details to login.";
   static const signInToAnother = "Sign in to Another Account";
-
 
   static const String orSignInWith = "or sign in with";
   static const String orSignUpWith = "or sign up with";
