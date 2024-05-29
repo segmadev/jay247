@@ -45,6 +45,11 @@ class AText {
   static const String transfer = "Transfer";
   static const String viewAll = "View All";
 
+  // bank details
+  static const String bankName = "Bank Name";
+  static const String acctNo = "Account Number";
+  static const String acctName = "Account Name";
+
   static const String name = "Full Name";
   static const String nameHint = "John Smith";
   static const String firstName = "First Name";
@@ -92,6 +97,8 @@ class AText {
   static const String resendEmail = "Resend Email";
   static const String resendEmailIn = "Resend email in";
 
+  static const String searchUser = "Search Username";
+
 // theme page
   static const String darkTheme = "Dark Theme";
   static const String lightTheme = "Light Theme";
@@ -111,6 +118,8 @@ class AText {
   static const String success = "Success";
   static const String accountCreatedSuccess =
       "You’ve account has been verified successfully";
+  static const String moenySent =
+      "Money sent successfully";
 
   // processing
   static const String processInfo = 'processing...';

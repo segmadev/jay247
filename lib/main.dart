@@ -21,9 +21,8 @@ class MainApp extends StatelessWidget {
       darkTheme: AAppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: const Scaffold(
-        body: 
-        NavigationMenu(),
-        // SwitchThemePage(),
+        body: SwitchThemePage(),
+        // NavigationMenu(),
         // APagePreview(),
         //     Center(
         //         child: CircularProgressIndicator(

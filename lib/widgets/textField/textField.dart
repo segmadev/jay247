@@ -12,7 +12,8 @@ class ATextFiled extends StatelessWidget {
       this.validator,
       this.textFormField,
       this.textInputDecoration,
-      this.obscureText = false});
+      this.obscureText = false,
+      this.suffixIcon});
   final String title;
   final String? hintText;
   final TextEditingController? controller;
@@ -21,6 +22,7 @@ class ATextFiled extends StatelessWidget {
   final TextFormField? textFormField;
   final InputDecoration? textInputDecoration;
   final bool obscureText;
+  final Widget? suffixIcon;
   @override
   Widget build(BuildContext context) {
     final hideValue = true.obs;
@@ -39,6 +41,7 @@ class ATextFiled extends StatelessWidget {
                   controller: controller,
                   initialValue: initialValue,
                   validator: validator,
+                  enabled: false,
                   decoration: textInputDecoration ??
                       InputDecoration(
                         hintText: hintText,
@@ -50,7 +53,7 @@ class ATextFiled extends StatelessWidget {
                                 icon: hideValue.value
                                     ? const Icon(Icons.remove_red_eye_outlined)
                                     : const Icon(Icons.remove_red_eye_rounded))
-                            : null,
+                            : suffixIcon,
                       ),
                 ))
       ],

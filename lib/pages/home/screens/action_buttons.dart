@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:jay247/pages/fund/screens/fund_account_screen.dart';
+import 'package:jay247/pages/transfer/screens/transfer_screen.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -9,7 +12,7 @@ class ActionButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: SizedBox(
         width: 300,
         child: Row(
@@ -19,13 +22,17 @@ class ActionButtons extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.fund),
-                  SizedBox(height: ASizes.sm),
-                  Text(AText.fund,
+                  ACircleIcon(
+                      icon: AIcons.fund,
+                      onTap: () {
+                        Get.to(const FundAccountScreen());
+                      }),
+                  const SizedBox(height: ASizes.sm),
+                  const Text(AText.fund,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ACircleIcon(icon: AIcons.crypto),
@@ -37,13 +44,18 @@ class ActionButtons extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.transfer),
-                  SizedBox(height: ASizes.sm),
-                  Text(AText.transfer,
+                  ACircleIcon(
+                    icon: AIcons.transfer,
+                    onTap: () {
+                      Get.to(const TransferScreen());
+                    },
+                  ),
+                  const SizedBox(height: ASizes.sm),
+                  const Text(AText.transfer,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ACircleIcon(icon: AIcons.withdraw),

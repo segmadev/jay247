@@ -57,8 +57,8 @@ class AAnimationLoaderWidget extends StatelessWidget {
                   child: RoundButton(
                     onPressed: onActionPressed ??
                         () {
-                          Get.to(const AuthorizeScreen()
-                              //NavigationMenu()
+                          Get.to(const NavigationMenu()
+                              // AuthorizeScreen()
                               );
                         },
                     name: actionText ?? AText.goDashboard,

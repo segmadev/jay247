@@ -10,38 +10,43 @@ class ACircleIcon extends StatelessWidget {
       this.shadowColor,
       this.backgoundColor,
       this.iconColor,
-      required this.icon});
+      required this.icon,
+      this.onTap});
   final double size;
   final bool showShadow;
   final IconData icon;
   final Color? shadowColor;
   final Color? backgoundColor;
   final Color? iconColor;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     final isDark = AHelperFunctions.isDarkMode(context);
-    return Container(
-      width: size,
-      height: size,
-      decoration: BoxDecoration(
-          boxShadow: showShadow
-              ? [
-                  BoxShadow(
-                    color: shadowColor ?? AColor.dprimary.withOpacity(0.2),
-                    offset: const Offset(0, 0),
-                    blurRadius: 21,
-                    spreadRadius: 4,
-                  )
-                ]
-              : null,
-          color: backgoundColor ??
-              (isDark
-                  ? AColor.black.withOpacity(0.9)
-                  : AColor.white.withOpacity(0.9)),
-          borderRadius: const BorderRadius.all(Radius.circular(100))),
-      child: Icon(icon,
-          color: iconColor ?? (!isDark ? AColor.lprimary : AColor.dprimary)),
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        width: size,
+        height: size,
+        decoration: BoxDecoration(
+            boxShadow: showShadow
+                ? [
+                    BoxShadow(
+                      color: shadowColor ?? AColor.dprimary.withOpacity(0.2),
+                      offset: const Offset(0, 0),
+                      blurRadius: 21,
+                      spreadRadius: 4,
+                    )
+                  ]
+                : null,
+            color: backgoundColor ??
+                (isDark
+                    ? AColor.black.withOpacity(0.9)
+                    : AColor.white.withOpacity(0.9)),
+            borderRadius: const BorderRadius.all(Radius.circular(100))),
+        child: Icon(icon,
+            color: iconColor ?? (!isDark ? AColor.lprimary : AColor.dprimary)),
+      ),
     );
   }
 }

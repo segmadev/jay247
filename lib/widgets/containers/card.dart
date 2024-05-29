@@ -13,6 +13,7 @@ class ACard extends StatelessWidget {
     this.onTap,
     this.topHeight,
     this.height,
+    this.paddingEdgeInsets,
   });
   final Widget child;
   final double width;
@@ -21,6 +22,7 @@ class ACard extends StatelessWidget {
   final double? padding;
   final dynamic? onTap;
   final double? topHeight;
+  final EdgeInsets? paddingEdgeInsets;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,7 +39,8 @@ class ACard extends StatelessWidget {
               borderRadius: BorderRadius.circular(ASizes.borderRadiusLg),
             ),
             child: Padding(
-              padding: EdgeInsets.all(padding ?? ASizes.md),
+              padding:
+                  paddingEdgeInsets ?? EdgeInsets.all(padding ?? ASizes.md),
               child: child,
             ),
           ),

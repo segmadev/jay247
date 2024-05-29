@@ -33,7 +33,8 @@ class AAppBar extends StatelessWidget implements PreferredSizeWidget {
     return Container(
       color: AColor.appBarBg,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: ASizes.lg),
+        padding: const EdgeInsets.symmetric(
+            vertical: 0, horizontal: ASizes.defaultSpace),
         child: AppBar(
             titleSpacing: ASizes.sm,
             // titleTextStyle: const TextStyle(color: AColor.appBarText),
@@ -58,7 +59,8 @@ class AAppBar extends StatelessWidget implements PreferredSizeWidget {
                     child: const Icon(
                       AIcons.back,
                       size: ASizes.iconSm,
-                    ))
+                    ),
+                  )
                 : leading,
             actions: actions),
       ),

@@ -33,4 +33,7 @@ class AIcons {
   static const IconData fund = Icons.add;
   static const IconData withdraw = UniconsLine.money_withdrawal;
   static const IconData crypto = UniconsLine.bitcoin_alt;
+
+  static const IconData copy = UniconsLine.copy;
+  static const IconData scanQr = UniconsLine.qrcode_scan;
 }
