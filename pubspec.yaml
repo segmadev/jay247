@@ -59,6 +59,7 @@ dependencies:
   country_flags: ^2.2.0
   card_swiper: ^3.0.1
   unicons: ^2.1.1
+  qr_flutter: ^4.1.0
 
 dev_dependencies:
   flutter_test:

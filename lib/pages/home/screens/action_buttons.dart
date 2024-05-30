@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jay247/pages/convert/screen/crypto_convert_screen.dart';
 import 'package:jay247/pages/fund/screens/fund_account_screen.dart';
 import 'package:jay247/pages/transfer/screens/transfer_screen.dart';
 import 'package:jay247/utills/consts/icons.dart';
@@ -32,10 +33,15 @@ class ActionButtons extends StatelessWidget {
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.crypto),
+                  ACircleIcon(
+                    icon: AIcons.crypto,
+                    onTap: () {
+                      Get.to(const CyptoConvertSreen());
+                    },
+                  ),
                   SizedBox(height: ASizes.sm),
                   Text(AText.convert,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),

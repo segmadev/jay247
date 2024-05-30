@@ -7,6 +7,11 @@ class AAssets {
   static const String nextIcon = "assets/icons/next_arrow.svg";
   static const String backIcon = "assets/icons/back_arrow_default.svg";
   static const String backPrimaryIcon = "assets/icons/back_arrow_primary.svg";
+
+  // crypto Icons
+  static const String bitcoinIcon = "assets/icons/bitcion_icon.png";
+  static const String usdtIcon = "assets/icons/usdt_icon.png";
+
   // profile
   static const String defaultProfileMale = "assets/images/profile/male.jpg";
   static const String defaultProfileFemale = "assets/images/profile/female.jpg";

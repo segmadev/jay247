@@ -1,3 +1,4 @@
+import 'package:jay247/pages/auth/screens/switch/switch_theme_page.dart';
 import 'package:jay247/pages/home/screens/home_screen.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/icons.dart';
@@ -75,6 +76,7 @@ class ANavigationList {
         child: Text("Logout Page"),
       ),
       "function": () {
+        const SwitchThemePage();
         // AuthenticationRepository().logout();
       }
     },

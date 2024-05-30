@@ -13,7 +13,7 @@ class ATextFiled extends StatelessWidget {
       this.textFormField,
       this.textInputDecoration,
       this.obscureText = false,
-      this.suffixIcon});
+      this.suffixIcon,  this.enabled = true});
   final String title;
   final String? hintText;
   final TextEditingController? controller;
@@ -23,6 +23,7 @@ class ATextFiled extends StatelessWidget {
   final InputDecoration? textInputDecoration;
   final bool obscureText;
   final Widget? suffixIcon;
+  final bool enabled;
   @override
   Widget build(BuildContext context) {
     final hideValue = true.obs;
@@ -41,7 +42,7 @@ class ATextFiled extends StatelessWidget {
                   controller: controller,
                   initialValue: initialValue,
                   validator: validator,
-                  enabled: false,
+                  enabled: enabled,
                   decoration: textInputDecoration ??
                       InputDecoration(
                         hintText: hintText,

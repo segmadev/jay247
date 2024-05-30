@@ -36,4 +36,9 @@ class AIcons {
 
   static const IconData copy = UniconsLine.copy;
   static const IconData scanQr = UniconsLine.qrcode_scan;
+
+  // cryto icons
+  static const IconData bitcoin = UniconsLine.bitcoin_circle;
+
 }
+

@@ -26,6 +26,7 @@ class AText {
   static const String back = "Back";
   static const String send = "Send";
   static const String save = "Save";
+  static const String amount = "Amount";
 
   static const String signup = "Sign Up";
   static const String signin = "Sign In";
@@ -131,4 +132,10 @@ class AText {
   static const String pinSuccess =
       "Pin has been saved successfully, you would need this pin for transactions and security.";
   static const String goDashboard = "Go to Dashboard";
+
+  // crypto
+  static const String cryptoCurrency = "Crypto Currency";
+  static const String convertCryto = "Convert Crypto to Currency";
+  static const String generateWallet = "Generate Wallet";
+  static const String walletAddress = "Wallet Address";
 }
