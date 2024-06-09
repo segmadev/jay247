@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:jay247/utills/consts/size.dart';
+import 'package:jay247/utills/helpers/helper_functions.dart';
 
 class ATextFiled extends StatelessWidget {
   const ATextFiled(
@@ -13,7 +14,8 @@ class ATextFiled extends StatelessWidget {
       this.textFormField,
       this.textInputDecoration,
       this.obscureText = false,
-      this.suffixIcon,  this.enabled = true});
+      this.suffixIcon,
+      this.enabled = true});
   final String title;
   final String? hintText;
   final TextEditingController? controller;

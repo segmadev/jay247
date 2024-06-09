@@ -33,9 +33,9 @@ class WalletScreen extends StatelessWidget {
                   ),
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black54,
-                  tabs: [
-                    const TabItem(title: 'NGN', count: 0),
-                    const TabItem(title: 'KSH', count: 0),
+                  tabs: const [
+                    TabItem(title: 'NGN', count: 0),
+                    TabItem(title: 'KSH', count: 0),
                   ],
                 ),
               ),

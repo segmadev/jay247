@@ -1,38 +1,11 @@
-import 'package:jay247/utills/helpers/helper_functions.dart';
-import 'package:jay247/utills/theme/theme.dart';
+import 'package:jay247/app.dart';
+import 'package:jay247/data/repositories/authentication/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:jay247/widgets/navigation/navigation_menu.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+Future<void> main() async {
+  await GetStorage.init();
+  Get.put(AuthenticationRepository());
   runApp(const MainApp());
 }
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    var isDark = AHelperFunctions.isDarkMode(context);
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.light, 
-      theme: AAppTheme.lightTheme,
-      darkTheme: AAppTheme.darkTheme,
-      // themeMode: ThemeMode.system,
-      home: const Scaffold(
-        body: NavigationMenu(),
-        // SwitchThemePage(),
-        // APagePreview(),
-        //     Center(
-        //         child: CircularProgressIndicator(
-        //   color: isDark ? AColor.black : AColor.white,
-        // ))
-      ),
-    );
-  }
-}
-
-// shape draw
-
-//Add this CustomPaint widget to the Widget Tree
-
