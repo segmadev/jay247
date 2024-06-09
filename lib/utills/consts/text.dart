@@ -42,9 +42,12 @@ class AText {
   static const String verify = "Verify";
   static const String fund = "Fund";
   static const String convert = "Convert";
-  static const String widthdraw = "Widthdraw";
+  static const String withdraw = "Withdraw";
   static const String transfer = "Transfer";
+  static const String currency = "Currency";
+  static const String selectCurrency = "Select Currency";
   static const String viewAll = "View All";
+  static const String withdawIntoBank = "Withdraw into your Bank Account";
 
   // bank details
   static const String bankName = "Bank Name";
@@ -119,8 +122,7 @@ class AText {
   static const String success = "Success";
   static const String accountCreatedSuccess =
       "You’ve account has been verified successfully";
-  static const String moenySent =
-      "Money sent successfully";
+  static const String moenySent = "Money sent successfully";
 
   // processing
   static const String processInfo = 'processing...';

@@ -1,4 +1,3 @@
-import 'package:jay247/pages/auth/screens/switch/switch_theme_page.dart';
 import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/utills/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -16,10 +15,10 @@ class MainApp extends StatelessWidget {
     var isDark = AHelperFunctions.isDarkMode(context);
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      // themeMode: ThemeMode.light,
+      themeMode: ThemeMode.light, 
       theme: AAppTheme.lightTheme,
       darkTheme: AAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.system,
       home: const Scaffold(
         body: NavigationMenu(),
         // SwitchThemePage(),

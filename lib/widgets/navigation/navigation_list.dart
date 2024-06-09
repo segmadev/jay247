@@ -1,5 +1,6 @@
 import 'package:jay247/pages/auth/screens/switch/switch_theme_page.dart';
 import 'package:jay247/pages/home/screens/home_screen.dart';
+import 'package:jay247/pages/wallet/screens/wallet.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -25,7 +26,7 @@ class ANavigationList {
       "label": AText.wallet,
       "icon": AIcons.wallet,
       "screen": Center(
-        child: Text("Wallet Page"),
+        child: WalletScreen(),
       )
     },
     {

@@ -11,9 +11,9 @@ import 'package:intl/intl.dart';
 import 'package:path/path.dart' as p;
 
 class AHelperFunctions {
-  static Color? getColor(String value) {
+  static Color? getColor(String value, context) {
     /// Define your product specific colors here and it will match the attribute colors and show specific 🟠🟡🟢🔵🟣🟤
-
+    var isDark = AHelperFunctions.isDarkMode(context);
     if (value == 'Green') {
       return Colors.green;
     } else if (value == 'Green') {
@@ -42,6 +42,10 @@ class AHelperFunctions {
       return Colors.teal;
     } else if (value == 'Indigo') {
       return Colors.indigo;
+    } else if (value == "primaryText") {
+      return isDark ? AColor.white : AColor.black;
+    } else if (value == "primaryColor") {
+      return isDark ? AColor.lprimary : AColor.dprimary;
     } else {
       return null;
     }

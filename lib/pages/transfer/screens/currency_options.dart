@@ -6,7 +6,8 @@ import 'package:jay247/utills/helpers/helper_functions.dart';
 import 'package:jay247/widgets/containers/card.dart';
 
 class CurrencyOptions extends StatelessWidget {
-  const CurrencyOptions({super.key});
+  const CurrencyOptions({super.key, this.width});
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class CurrencyOptions extends StatelessWidget {
           ? AColor.dprimary.withOpacity(0.3)
           : AColor.lprimary.withOpacity(0.3),
       padding: 5.0,
-      width: 150,
+      width: width ?? 150,
       child: Obx(() => DropdownButton(
             padding: const EdgeInsets.all(0),
             isExpanded: true,

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:jay247/pages/convert/screen/crypto_convert_screen.dart';
 import 'package:jay247/pages/fund/screens/fund_account_screen.dart';
 import 'package:jay247/pages/transfer/screens/transfer_screen.dart';
+import 'package:jay247/pages/withdraw/screens/withdraw_screen.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/size.dart';
 import 'package:jay247/utills/consts/text.dart';
@@ -42,8 +43,8 @@ class ActionButtons extends StatelessWidget {
                       Get.to(const CyptoConvertSreen());
                     },
                   ),
-                  SizedBox(height: ASizes.sm),
-                  Text(AText.convert,
+                  const SizedBox(height: ASizes.sm),
+                  const Text(AText.convert,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
@@ -61,12 +62,17 @@ class ActionButtons extends StatelessWidget {
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  ACircleIcon(icon: AIcons.withdraw),
-                  SizedBox(height: ASizes.sm),
-                  Text(AText.widthdraw,
+                  ACircleIcon(
+                    icon: AIcons.withdraw,
+                    onTap: () {
+                      Get.to(const WithdrwaScreen());
+                    },
+                  ),
+                  const SizedBox(height: ASizes.sm),
+                  const Text(AText.withdraw,
                       style: TextStyle(fontSize: ASizes.fontSizeSm)),
                 ],
               ),

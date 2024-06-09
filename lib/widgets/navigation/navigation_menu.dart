@@ -1,4 +1,5 @@
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:jay247/pages/auth/screens/switch/switch_theme_button.dart';
 import 'package:jay247/utills/consts/colors.dart';
 import 'package:jay247/utills/consts/icons.dart';
 import 'package:jay247/utills/consts/size.dart';
@@ -45,6 +46,7 @@ class NavigationMenu extends StatelessWidget {
             icon: AIcons.notification,
             onPressed: () {},
           ),
+          const SwitchThemeButton(isSmall: true),
         ],
       ),
       bottomNavigationBar: Obx(
