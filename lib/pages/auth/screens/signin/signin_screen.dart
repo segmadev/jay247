@@ -93,6 +93,11 @@ class SignInScreen extends StatelessWidget {
                       Get.to(const SignUpScreen());
                     },
                   ),
+                  TextButton(
+                      onPressed: () {
+                        Get.to(const OtpScreen());
+                      },
+                      child: const Text("OTP SCreen")),
                   const SizedBox(
                     height: 120,
                   ),

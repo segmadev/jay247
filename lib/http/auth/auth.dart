@@ -46,9 +46,9 @@ class AuthApi {
     final url = Uri.parse(pathUrl); //Repclace Your Endpoint
     final headers = {'Content-Type': 'application/json'};
     final body = jsonEncode(bodyData);
-    final response = await http.post(url, headers: headers, body: body);
+    final response = await http.patch(url, headers: headers, body: body);
+    print(response.body);
     try {
-      print("Body b4" + body);
       final data = ApiHelper.processResponse(response);
       return data;
     } catch (e) {

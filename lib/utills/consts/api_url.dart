@@ -5,7 +5,7 @@ class ApiUrl {
   static String check_username = "/auth/check-username";
   static String sign_in_url = "/auth/login";
   static String sign_up_url = "/auth/register";
-  static String verify_email_url = "/auth/verify-influencer";
+  static String verify_email_url = "/auth/verify-user";
   static String resend_otp_code = "/auth/resend-otp";
   static String get_user = "/user/get-user";
   static String update_user = "/user/update-user";
